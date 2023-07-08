@@ -47,6 +47,7 @@ public class Main {
         // mySome() method call
         boolean resultOfSome = mySome(arr, n -> n % 2 !=0);
         System.out.println(resultOfSome);
+        
         // mySlice() method call
         String[] newStr2 = mySlice(str2, 2, 3);
         for (var el : newStr2)
@@ -250,7 +251,7 @@ public class Main {
      */
     public static <T> T[] mySlice(T[] arr, int startInd, int endInd) {
         int size = endInd - startInd + 1;
-        T[] newArr = (T[]) Array.newInstance(arr.getClass().getComponentType(), size);;
+        T[] newArr = (T[]) Array.newInstance(arr.getClass().getComponentType(), size);
         if (startInd <= endInd && startInd >= 0 && endInd <= arr.length - 1) {
             int i = 0;
             while (startInd <= endInd) {
